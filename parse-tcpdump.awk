@@ -1,4 +1,4 @@
-# extrace dBM
+ # extrace dBM
 match($0, /-?[0-9]+dBm/, strength) {
 	STRENGTH=strength[0]
 }
@@ -26,8 +26,10 @@ match($0, /Probe Request \(.*\)/, ssid) {
 		gsub(/\.[0-9]+/, "", $1)
 		TIMESTAMP=$1
 
+		msg = "%m/%d/%Y %H:%M:%S"
+		
 		# print them to stdout
-		print TIMESTAMP "," STRENGTH "," MAC "," "\""SSID "\""
+		print strftime(msg) "," TIMESTAMP "," STRENGTH "," MAC "," "\""SSID "\""
 		system("") # flush the buffer
 	}
 }
