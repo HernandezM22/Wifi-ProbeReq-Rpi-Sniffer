@@ -4,7 +4,7 @@
 
         starttime1=0600 #e.g. 201712312355 for date+time or 1530 for time
         stoptime1=1200
-        scriptname1="./myscript"
+        scriptname1="./sniff-probes.sh"
 
         # wait for starttime
         echo "Waiting for " "$starttime1" " to start " "$scriptname1";
