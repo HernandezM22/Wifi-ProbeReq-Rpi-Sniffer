@@ -1,5 +1,5 @@
 #!/bin/bash
-
+PATH=/usr/local/sbin:/usr/local/bin/:/usr/sbin:/usr/bin:/sbin:/bin
 OUTPUT="${OUTPUT:-probes.txt}"
 CHANNEL_HOP="${CHANNEL_HOP:-0}"
 
@@ -32,7 +32,7 @@ if [ "$CHANNEL_HOP" -eq 1 ] ; then
 fi
 
 # filter with awk, then use sed to convert tabs to spaces and remove front and back quotes around SSID
-timeout 30s tcpdump -i "wlan1mon" -e -s 256 subtype probe-req | awk -f parse-tcpdump.awk | tee -a "$OUTPUT" 
+timeout 300s tcpdump -i "wlan1mon" -e -s 256 subtype probe-req | awk -f parse-tcpdump.awk | tee -a "$OUTPUT" 
 echo "Calling manager.sh"
 sh ./connector.sh
 
