@@ -2,8 +2,8 @@
 
     if [ "$1" = "go" ]; then
 
-        starttime1=1800 #e.g. 201712312355 for date+time or 1530 for time
-        stoptime1=1805
+        starttime1=2030 #e.g. 201712312355 for date+time or 1530 for time
+        stoptime1=2035
         scriptname1="./sniff-probes.sh"
 
         # wait for starttime
