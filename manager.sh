@@ -1,6 +1,6 @@
 #!/bin/bash
 
-        starttime1=0345 #e.g. 201712312355 for date+time or 1530 for time
+        starttime1=1430 #e.g. 201712312355 for date+time or 1530 for time
         scriptname1="./sniff-probes.sh"
 
         # wait for starttime
