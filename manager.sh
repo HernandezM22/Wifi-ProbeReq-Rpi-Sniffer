@@ -1,6 +1,10 @@
 #!/bin/bash
 
+<<<<<<< HEAD
         starttime1=1430 #e.g. 201712312355 for date+time or 1530 for time
+=======
+        starttime1=1400 #e.g. 201712312355 for date+time or 1530 for time
+>>>>>>> fe5bdfa296ee2a834fa5bbce8f97db4eaa0723fd
         scriptname1="./sniff-probes.sh"
 
         # wait for starttime
